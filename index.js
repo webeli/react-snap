@@ -304,9 +304,9 @@ const inlineCss = async opt => {
 const asyncScriptTags = ({ page }) => {
   return page.evaluate(() => {
     Array.from(document.querySelectorAll("script[src]")).forEach(x => {
-      x.parentNode && x.parentNode.removeChild(x);
+      // x.parentNode && x.parentNode.removeChild(x);
       x.setAttribute("async", "true");
-      document.head.appendChild(x);
+      // document.head.appendChild(x);
     });
   });
 };
